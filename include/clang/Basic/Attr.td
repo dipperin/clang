@@ -959,6 +959,12 @@ def C11NoReturn : InheritableAttr {
   let Documentation = [C11NoReturnDocs];
 }
 
+def PlatonConstant : InheritableAttr {
+  let Spellings = [CXX11<"dipc", "constant">, GNU<"dipc_constant">];
+  let Subjects = SubjectList<[CXXRecord, CXXMethod]>;
+  let Documentation = [DipcConstantDocs];
+}
+
 def CXX11NoReturn : InheritableAttr {
   let Spellings = [CXX11<"", "noreturn", 200809>];
   let Subjects = SubjectList<[Function], ErrorDiag>;

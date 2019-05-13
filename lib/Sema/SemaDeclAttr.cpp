@@ -5982,6 +5982,9 @@ static void ProcessDeclAttribute(Sema &S, Scope *scope, Decl *D,
     S.Diag(AL.getLoc(), diag::err_stmt_attribute_invalid_on_decl)
         << AL.getName() << D->getLocation();
     break;
+  case ParsedAttr::AT_DipcConstant:
+    handleSimpleAttribute<DipcConstantAttr>(S, D, AL);
+    break;
   case ParsedAttr::AT_Interrupt:
     handleInterruptAttr(S, D, AL);
     break;
