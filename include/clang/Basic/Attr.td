@@ -959,7 +959,7 @@ def C11NoReturn : InheritableAttr {
   let Documentation = [C11NoReturnDocs];
 }
 
-def PlatonConstant : InheritableAttr {
+def DipcConstant : InheritableAttr {
   let Spellings = [CXX11<"dipc", "constant">, GNU<"dipc_constant">];
   let Subjects = SubjectList<[CXXRecord, CXXMethod]>;
   let Documentation = [DipcConstantDocs];
