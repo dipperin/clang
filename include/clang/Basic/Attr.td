@@ -965,6 +965,18 @@ def DipcConstant : InheritableAttr {
   let Documentation = [DipcConstantDocs];
 }
 
+def DipcPayable : InheritableAttr {
+  let Spellings = [CXX11<"dipc", "payable">, GNU<"dipc_payable">];
+  let Subjects = SubjectList<[CXXRecord, CXXMethod]>;
+  let Documentation = [DipcPayableDocs];
+}
+
+def DipcWithdraw : InheritableAttr {
+  let Spellings = [CXX11<"dipc", "withdraw">, GNU<"dipc_withdraw">];
+  let Subjects = SubjectList<[CXXRecord, CXXMethod]>;
+  let Documentation = [DipcWithdrawDocs];
+}
+
 def CXX11NoReturn : InheritableAttr {
   let Spellings = [CXX11<"", "noreturn", 200809>];
   let Subjects = SubjectList<[Function], ErrorDiag>;

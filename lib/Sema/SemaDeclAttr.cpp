@@ -5985,6 +5985,12 @@ static void ProcessDeclAttribute(Sema &S, Scope *scope, Decl *D,
   case ParsedAttr::AT_DipcConstant:
     handleSimpleAttribute<DipcConstantAttr>(S, D, AL);
     break;
+  case ParsedAttr::AT_DipcPayable:
+    handleSimpleAttribute<DipcPayableAttr>(S, D, AL);
+    break;
+  case ParsedAttr::AT_DipcWithdraw:
+    handleSimpleAttribute<DipcWithdrawAttr>(S, D, AL);
+    break;
   case ParsedAttr::AT_Interrupt:
     handleInterruptAttr(S, D, AL);
     break;
