@@ -273,13 +273,6 @@ The ``dipc::payable`` attribute marks a method can transfer to contract.
   }];
 }
 
-def DipcWithdrawDocs : Documentation {
-  let Category = DocCatFunction;
-  let Content = [{
-The ``dipc::withdraw`` attribute marks a method can transfer from contract to other address.
-  }];
-}
-
 def CXX11NoReturnDocs : Documentation {
   let Category = DocCatFunction;
   let Content = [{
