@@ -731,6 +731,8 @@ public:
 
   bool isDipcPayable() const {return hasAttr<DipcPayableAttr>();}
 
+  bool isDipcExport() const {return hasAttr<DipcExportAttr>();}
+
   CXXRecordDecl *getCanonicalDecl() override {
     return cast<CXXRecordDecl>(RecordDecl::getCanonicalDecl());
   }
@@ -2079,6 +2081,8 @@ public:
   bool isDipcConstant() const { return hasAttr<DipcConstantAttr>();}
 
   bool isDipcPayable() const {return hasAttr<DipcPayableAttr>();}
+
+  bool isDipcExport() const {return hasAttr<DipcExportAttr>();}
 
   /// Returns true if the given operator is implicitly static in a record
   /// context.

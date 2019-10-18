@@ -273,6 +273,12 @@ The ``dipc::payable`` attribute marks a method can transfer to contract.
   }];
 }
 
+def DipcExportDocs : Documentation {
+  let Category = DocCatFunction;
+  let Content = [{
+The ``dipc::export`` attribute marks a method can be call by contract caller.
+  }];
+}
 def CXX11NoReturnDocs : Documentation {
   let Category = DocCatFunction;
   let Content = [{
